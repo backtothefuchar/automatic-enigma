@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slideshow</title>
+    <link type="text/css" rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1 style="color:black"> Exercise 2: Slideshow!</h1>
+
+        <p>Below are a few pictures of bears that'll make you go "Those aren't bears, that's Vladimir
+            Putin!"</p>
+
+        <img src="slideshow/1.jpg" id="img" width=600 height=400 align="center"><br><br>
+
+        <button id="previous" onclick="picBack()">Previous Image</button>
+
+        <button id="next" onclick="picForward()">Next Image</button>
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+
+    let pics = ["1.jpg", "2.jfif", "3.jfif", "4.jfif", "5.jfif"];
+    var i = 0;
+    let img = document.getElementById("img");
+
+    function picForward() {
+        i += 1;
+        i %= pics.length;
+
+        img.src = "slideshow/" + pics[i];
+    }
+
+    function picBack() {
+        i += pics.length - 1;
+        i %= pics.length;
+        img.src = "slideshow/" + pics[i];
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+body {
+    background-image: url(blue.jpeg); background-size: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: medium;
+    margin: 0px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#biography {
+    padding: 10px 100px 10px 100px;
+}
+
+#websites {
+    padding: 10px 100px 10px 100px;
+}
+
+#youtube {
+    padding: 10px 100px 40px 100px;
+}
+
+h1 {
+    color:#24586d;
+}
+
+a {
+    color:#24586d;
+}
+
+a:hover {
+    color:aqua;
+}
+
+ul {
+    font-size: medium;
+}
+
+div {
+    background-color: #adadad;
+    margin: 20px 40px ;    
+    padding: 10px 40px 20px 40px;
+}
+
+p {
+    font-size: large;
+}

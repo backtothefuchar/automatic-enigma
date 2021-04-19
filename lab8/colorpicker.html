@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Color Picker</title>
+    <link type="text/css" rel="stylesheet" href="colorpicker.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <h2>Exercise 4: Color Picker</h2>
+        <h4>Use the color picker below to change the border and background colors of the paragraph. It is currently at
+            default values.</h4>
+    </div>
+
+    <div>
+        <h4>Change border color for paragraph (units range form 0 to 255):</h4>
+        <label for="rB">Red value: </label>
+        <input type="number" name="rB" id="rB"><br>
+
+        <label for="gB">Green value: </label>
+        <input type="number" name="gB" id="gB"><br>
+
+        <label for="bB">Blue value: </label>
+        <input type="number" name="bB" id="bB"><br>
+
+        <label for="width">Width: </label>
+        <input type="number" name="width" id="width">
+    </div>
+
+    <div>
+        <h4>Change background color for paragraph (units range form 0 to 255):</h4>
+
+        <label for="rBG">Red value: </label>
+        <input type="number" name="rBG" id="rBG"><br>
+
+        <label for="gBG">Green value: </label>
+        <input type="number" name="gBG" id="gBG"><br>
+
+        <label for="bBG">Blue value: </label>
+        <input type="number" name="bBG" id="bBG">
+
+        <br><br>
+        <button onclick="change()">Change Colors</button>
+    </div>
+
+    <div id="lipsum">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+    let i = document.getElementById("lipsum");
+
+    function change() {
+        let R1 = document.getElementById("rB").value;
+        let G1 = document.getElementById("gB").value;
+        let B1 = document.getElementById("bB").value;
+        let BW = document.getElementById("width").value;
+
+        i.style.border = BW + "px solid rgb(" + R1 + ", " + G1 + ", " + B1 + ")"
+
+        let R2 = document.getElementById("rBG").value;
+        let G2 = document.getElementById("gBG").value;
+        let B2 = document.getElementById("bBG").value;
+
+        i.style.backgroundColor = "rgb(" + R2 + ", " + G2 + ", " + B2 + ")";
+
+    }
+
+</script>
+
+</html>
